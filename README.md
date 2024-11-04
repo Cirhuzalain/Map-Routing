@@ -1,7 +1,7 @@
 # Map Routing
 
 ## Prerequisites
-You need to have Python and pip install on your machine
+You need to have Python, PostgreSQL and Pip install on your machine
 
 ## Clone the project
 You can clone the repository with `git clone https://github.com/Cirhuzalain/Map-Routing.git`
