@@ -1,6 +1,4 @@
 import requests
-import os
-import json
 
 from django.utils.html import escape
 from django.http import JsonResponse
@@ -12,8 +10,8 @@ def get_route_data(request):
     try:
         routes_data = {"data" : [], "costs" : 0}
         # convert location location in lat long
-        start_location = escape(request.POST.get("start_location", "Boston, MA"))
-        end_location = escape(request.POST.get("end_location", "San Fransisco, CA"))
+        start_location = escape(request.GET.get("start_location", "Boston, MA"))
+        end_location = escape(request.GET.get("end_location", "San Fransisco, CA"))
 
         # get routes data from Google Routes API
         routes_response = get_routes([start_location, end_location])
