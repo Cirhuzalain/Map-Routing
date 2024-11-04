@@ -7,6 +7,10 @@ from getroutes.models import *
 from getroutes.utils import *
 
 def get_route_data(request):
+    """
+        Get route data by leveraging Google's Route API
+        Return route in steps with navigation instruction and fuel location
+    """
     try:
         routes_data = {"data" : [], "costs" : 0}
         start_location = escape(request.GET.get("start_location", "Boston, MA"))
