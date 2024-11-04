@@ -9,7 +9,6 @@ from getroutes.utils import *
 def get_route_data(request):
     try:
         routes_data = {"data" : [], "costs" : 0}
-        # convert location location in lat long
         start_location = escape(request.GET.get("start_location", "Boston, MA"))
         end_location = escape(request.GET.get("end_location", "San Fransisco, CA"))
 
